@@ -1,0 +1,23 @@
+
+h1 {
+    font-family: 'Bree Serif', serif;
+    text-align: center;
+}
+
+.ProjectTitle, .ProjectInfo{
+  display: inline-block;
+}
+
+.ProjectTitle{
+  font-size: 20pt;
+  font-family: 'Bree Serif', serif;
+  margin-left: 30%;
+  vertical-align: top;
+  width: 100px;
+}
+
+.ProjectInfo{
+  font-family: 'Ubuntu', sans-serif;
+  width: 650px;
+  text-align: bottom;
+}
