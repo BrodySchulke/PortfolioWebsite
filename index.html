@@ -10,38 +10,33 @@
 <body>
     <h1>Brody Schulke</h1>
 
-    <div>
+    <ul class="tabs">
+        <li><a href="javascript:void(0)" class="tabLink" onclick="openTab(event, 'About')">About</a></li>
+        <li><a href="javascript:void(0)" class="tabLink" onclick="openTab(event, 'Projects')">Projects</a></li>
+        <li><a href="javascript:void(0)" class="tabLink" onclick="openTab(event, 'TBD')">TBD</a></li>
+    </ul>
 
-        <div>
-            <div class="ProjectTitle">
-                <p>
-                    Biippo
-                </p>
-            </div>
-            <div class="ProjectInfo">
-                <p>
-                    Here is some test data to represent the information to be dsiplayed Here is some test data to represent the information to be dsiplayed Here is some test data to represent the information to be dsiplayed Here is some test data to represent the information
-                    to be dsiplayed Here is some test data to represent the information to be dsiplayed Here is some test data to represent the information to be dsiplayed
-                </p>
-            </div>
-        </div>
-
-        <div>
-            <div class="ProjectTitle">
-                <p>
-                    Testing
-                </p>
-            </div>
-            <div class="ProjectInfo">
-                <p>
-                    Here is some test data to represent the information to be dsiplayed Here is some test data to represent the information to be dsiplayed Here is some test data to represent the information to be dsiplayed Here is some test data to represent the information
-                    to be dsiplayed Here is some test data to represent the information to be dsiplayed Here is some test data to represent the information to be dsiplayed
-                </p>
-            </div>
-        </div>
-        
+    <div id="About" class="tabContent">
+      <h3>HERE IS SOME ABOUT STUFF</h3>
     </div>
 
+    <div id="Projects" class="subTabs">
+        <ul class="tabs">
+            <li><a href="javascript:void(0)" class="tabLink" onclick="displayContent(event, 'Biippo')">Biippo</a></li>
+            <li><a href="javascript:void(0)" class="tabLink" onclick="displayContent(event, 'Filesystem')">Filesystem</a></li>
+            <li><a href="javascript:void(0)" class="tabLink" onclick="displayContent(event, 'JollyBanker')">Jolly Banker</a></li>
+        </ul>
+    </div>
+
+    <div id="Biippo" class="tabContent">
+      <h3>HERE IS SOME BIIIIIIPPPPOOOOO STUFFFFF</h3>
+    </div>
+    <div id="Filesystem" class="tabContent">
+      <h3>HERE IS SOME FILESYSTEM STUFFFFF</h3>
+    </div>
+    <div id="JollyBanker" class="tabContent">
+      <h3>HERE IS SOME JOLLYBANKER STUFFFFF</h3>
+    </div>
 </body>
 
 </html>

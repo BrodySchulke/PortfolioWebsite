@@ -1,23 +1,57 @@
 
+body{
+  background-color: #ede9ce;
+}
 h1 {
     font-family: 'Bree Serif', serif;
     text-align: center;
+    background: #89bdd3;
+    height: 75;
+    margin-bottom: 0px;
+    margin-top: 0px;
 }
 
-.ProjectTitle, .ProjectInfo{
+div{
+  text-align: center;
+}
+
+ul.tabs{
+  list-style: none;
+  overflow: hidden;
+  text-align: center;
+  background: brown;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  background-color: #c7ad88;
+}
+
+ul.tabs li{
   display: inline-block;
+  width:200px;
 }
 
-.ProjectTitle{
-  font-size: 20pt;
+ul.tabs li a{
+  display:inline-block;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  padding: 14px 16px;
   font-family: 'Bree Serif', serif;
-  margin-left: 30%;
-  vertical-align: top;
-  width: 100px;
+  transition: 0.5s;
 }
 
-.ProjectInfo{
-  font-family: 'Ubuntu', sans-serif;
-  width: 650px;
-  text-align: bottom;
+ul.tabs li a:hover{
+  background-color: #f7e2c8;
+}
+
+ul.tabs li a:focus, .active{
+  background-color: #edd9c0;
+}
+
+.subTabs{
+  display:None;
+}
+
+.tabContent{
+  display: none;
 }
