@@ -1,6 +1,7 @@
 
 body{
   background-color: #ede9ce;
+  min-width: 800px;
 }
 h1 {
     font-family: 'Bree Serif', serif;
@@ -43,6 +44,7 @@ ul.tabs li a{
   padding: 14px 16px;
   font-family: 'Ubuntu', sans-serif;
   font-weight: bold;
+  font-size: 16pt;
   transition: 0.5s;
 }
 
@@ -97,6 +99,7 @@ ul.tabs li a:focus, .active{
 .projectInfoTitle{
   text-align: center;
   margin-top:2%;
+  margin-bottom: 10px;
 }
 
 .projectInfoTitle h3{
@@ -117,13 +120,26 @@ ul.tabs li a:focus, .active{
   width: 65px;
 }
 
-.projectinfoText{
-  margin-left: 15%;
-  margin-right: 10%;
-  text-align: left;
+.projectInfoText{
+  display:inline-block;
+  text-align: center;
+  width: 800px;
+}
+
+.projectInfoText ul{
+  text-align:left;
 }
 
 .projectInfoText li{
   font-family: 'Ubuntu', sans-serif;
+  font-size: 16pt;
   margin-bottom: 10px;
+}
+
+
+.projectInfoScreenshots img{
+  height: 600px;
+  width: 800px;
+  display: block;
+  margin: 0 auto;
 }
