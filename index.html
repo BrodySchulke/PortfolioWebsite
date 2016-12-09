@@ -3,13 +3,15 @@
 <head>
     <link type="text/css" href="styling.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Ubuntu" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+
     <script type="text/javascript" src="jquery.js"></script>
 </head>
 
 <body>
-    <h1>Brody Schulke</h1>
 
+    <input type="image" src="res/scrollUp.png" id="scrollUp"/>
+    <h1>Brody Schulke</h1>
     <ul class="tabs">
         <li><a href="javascript:void(0)" class="tabLink" onclick="openTab(event, 'About')">About</a></li>
         <li><a href="javascript:void(0)" class="tabLink" onclick="openTab(event, 'Projects')">Projects</a></li>
@@ -30,6 +32,7 @@
             <li><a href="javascript:void(0)" class="tabLink" onclick="displayContent(event, 'CityUtils')">City Utils</a></li>
         </ul>
     </div>
+
 
     <div id="Biippo" class="tabContent">
         <div class="projectTitle">
@@ -87,7 +90,7 @@
             <div class="projectInfoTitle">
                 <h3>Biippo's Technical Details</h3>
                 <div class="projectInfoTitleIcon">
-                    <img src="res/Icons/technologyIcon.png" />
+                    <img src="res/Icons/detailsIcon.png" />
                 </div>
             </div>
             <div class="projectInfoText">
@@ -122,13 +125,22 @@
 
             <div class="projectInfo">
                 <div class="projectInfoTitle">
-                    <h3>Technology Used Overview</h3>
+                    <h3>Technology Used</h3>
+                    <div class="projectInfoTitleIcon">
+                      <img src="res/Icons/technologyIcon.png" />
+                    </div>
+                </div>
+                <div class="technologyIcons">
+                  <img src="res/Technology/android.png" />
+                  <img src="res/Technology/androidStudio.png" />
+                  <img src="res/Technology/java.png" />
+                  <img src="res/Technology/xml.png" />
                 </div>
 
             </div>
 
         </div>
-        
+
         <div id="Filesystem" class="tabContent">
             <h2>Filesystem in Java</h2>
         </div>

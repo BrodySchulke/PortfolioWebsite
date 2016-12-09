@@ -1,8 +1,8 @@
-
-body{
-  background-color: #ede9ce;
-  min-width: 800px;
+body {
+    background-color: #ede9ce;
+    min-width: 800px;
 }
+
 h1 {
     font-family: 'Bree Serif', serif;
     text-align: center;
@@ -14,132 +14,152 @@ h1 {
 }
 
 h2 {
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 25pt;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 25pt;
 }
 
-div{
-  text-align: center;
+div {
+    text-align: center;
 }
 
-ul.tabs{
-  list-style: none;
-  overflow: hidden;
-  text-align: center;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  background-color: #c7ad88;
+ul.tabs {
+    list-style: none;
+    overflow: hidden;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background-color: #c7ad88;
 }
 
-ul.tabs li{
-  display: inline-block;
-  width:200px;
+ul.tabs li {
+    display: inline-block;
+    width: 200px;
 }
 
-ul.tabs li a{
-  display:inline-block;
-  text-align: center;
-  text-decoration: none;
-  color: black;
-  padding: 14px 16px;
-  font-family: 'Ubuntu', sans-serif;
-  font-weight: bold;
-  font-size: 16pt;
-  transition: 0.5s;
+ul.tabs li a {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    padding: 14px 16px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    font-size: 16pt;
+    transition: 0.5s;
 }
 
-ul.tabs li a:hover{
-  background-color: #f7e2c8;
+ul.tabs li a:hover {
+    background-color: #f7e2c8;
 }
 
-ul.tabs li a:focus, .active{
-  background-color: #edd9c0;
+ul.tabs li a:focus, .active {
+    background-color: #edd9c0;
 }
 
-.subTabs{
-  display:None;
+.subTabs {
+    display: None;
 }
 
-.tabContent{
+.tabContent {
+    display: none;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 2%;
+    background-color: #edd9c0;
+}
+
+#scrollUp{
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  width: 80px;
+  height: 90px;
   display: none;
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-top: 2%;
-  background-color: #edd9c0;
 }
 
-.projectTitle{
-  background-color: #c7ad88;
+.projectTitle {
+    background-color: #c7ad88;
 }
 
-.projectTitle h2{
-  display: inline-block;
-  vertical-align: top;
-  margin-right: 20px;
-  font-size: 30pt;
-  font-family: 'Bree Serif', serif;
-}
-.githubButton{
-  display:inline-block;
-  margin-top:10px;
+.projectTitle h2 {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 20px;
+    font-size: 30pt;
+    font-family: 'Bree Serif', serif;
 }
 
-.githubIcon{
-  height: 85px;
-  width: 85px;
-  margin-bottom: 0px;
-}
-.githubButton h3{
-  margin-top: 0px;
-  margin-bottom: 0px;
-  vertical-align: middle;
-  font-size: 8pt;
+.githubButton {
+    display: inline-block;
+    margin-top: 10px;
 }
 
-.projectInfoTitle{
-  text-align: center;
-  margin-top:2%;
-  margin-bottom: 10px;
+.githubIcon {
+    height: 85px;
+    width: 85px;
+    margin-bottom: 0px;
 }
 
-.projectInfoTitle h3{
-  display: inline;
-  white-space: nowrap;
-  font-family: 'Bree serif', serif;
-  font-size: 25pt;
+.githubButton h3 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    vertical-align: middle;
+    font-size: 8pt;
+}
+
+.projectInfoTitle {
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 10px;
+}
+
+.projectInfoTitle h3 {
+    display: inline;
+    white-space: nowrap;
+    font-family: 'Bree serif', serif;
+    font-size: 25pt;
 }
 
 .projectInfoTitleIcon {
-  display:inline-block;
-  white-space: nowrap;
-  vertical-align: bottom;
+    display: inline-block;
+    white-space: nowrap;
+    vertical-align: bottom;
 }
 
-.projectInfoTitleIcon img{
-  height:65px;
-  width: 65px;
+.projectInfoTitleIcon img {
+    height: 65px;
+    width: 65px;
 }
 
-.projectInfoText{
-  display:inline-block;
-  text-align: center;
-  width: 800px;
+.projectInfoText {
+    display: inline-block;
+    text-align: center;
+    width: 800px;
 }
 
-.projectInfoText ul{
-  text-align:left;
+.projectInfoText ul {
+    text-align: left;
 }
 
-.projectInfoText li{
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 16pt;
-  margin-bottom: 10px;
+.projectInfoText li {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16pt;
+    margin-bottom: 10px;
 }
 
+.projectInfoScreenshots img {
+    height: 600px;
+    width: 800px;
+    display: block;
+    margin: 0 auto;
+}
 
-.projectInfoScreenshots img{
-  height: 600px;
-  width: 800px;
-  display: block;
-  margin: 0 auto;
+.technologyIcons {
+    margin-top: 30px;
+}
+
+.technologyIcons img {
+    height: 100px;
+    width: 100px;
+    margin-left: 50px;
 }

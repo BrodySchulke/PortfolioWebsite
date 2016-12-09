@@ -30,14 +30,19 @@ function openTab(evt, tabName){
   evt.currentTarget.className += " active";
 }
 
-$('.tabs').tabs({
-        select: function(event, ui) {
-            $(ui.panel).animate({opacity:0.1});
-        },
-        show: function(event, ui) {
-            $(ui.panel).animate({opacity:1.0},1000);
-        }
-});
 
 $(document).ready(function(){
+  $(window).scroll(function(){
+    if($(window).scrollTop() > 100){
+      $("#scrollUp").fadeIn("slow");
+    }
+    else{
+      $("#scrollUp").fadeOut("slow");
+    }
+  });
+
+  $("#scrollUp").click(function(){
+   // Animate the scrolling motion.
+   $("html, body").animate({ scrollTop:0 },"slow");
+  });
 });
