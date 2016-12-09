@@ -3,23 +3,27 @@
 <head>
     <link type="text/css" href="styling.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Ubuntu" rel="stylesheet">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 
     <script type="text/javascript" src="jquery.js"></script>
 </head>
 
 <body>
 
-    <input type="image" src="res/scrollUp.png" id="scrollUp"/>
+    <input type="image" src="res/scrollUp.png" id="scrollUp" />
     <h1>Brody Schulke</h1>
     <ul class="tabs">
-        <li><a href="javascript:void(0)" class="tabLink" onclick="openTab(event, 'About')">About</a></li>
+        <li><a href="javascript:void(0)" class="tabLink" id="startupTab" onclick="openTab(event, 'About')">About</a></li>
         <li><a href="javascript:void(0)" class="tabLink" onclick="openTab(event, 'Projects')">Projects</a></li>
         <li><a href="javascript:void(0)" class="tabLink" onclick="openTab(event, 'TBD')">TBD</a></li>
     </ul>
 
     <div id="About" class="tabContent">
-        <h2>HERE IS SOME ABOUT STUFF</h2>
+      <div class="projectTitle">
+        <h2>About Brody Schulke</h2>
+      </div>
+
+        <img src="res/resume.png" id="Resume"/>
     </div>
 
     <div id="Projects" class="subTabs">
@@ -35,6 +39,7 @@
 
 
     <div id="Biippo" class="tabContent">
+        <!--Title-->
         <div class="projectTitle">
             <h2>Biippo Car Maintenance Application</h2>
             <div class="githubButton">
@@ -44,7 +49,7 @@
                 <h3>Click me!</h3>
             </div>
         </div>
-
+        <!--About-->
         <div class="projectInfo">
             <div class="projectInfoTitle">
                 <h3>About Biippo</h3>
@@ -61,7 +66,7 @@
                 </ul>
             </div>
         </div>
-
+        <!--User Focus-->
         <div class="projectInfo">
             <div class="projectInfoTitle">
                 <h3>Biippo's User Focus</h3>
@@ -85,7 +90,7 @@
                 </ul>
             </div>
         </div>
-
+        <!--Technical Details-->
         <div class="projectInfo">
             <div class="projectInfoTitle">
                 <h3>Biippo's Technical Details</h3>
@@ -101,7 +106,7 @@
                         <li>"Category" would contain an ArrayList of "Subcategory" instances</li>
                     </ul>
                     <li>Pages would go through a switch statement of item IDs upon button selection to determine which intent, or activity, to create and start</li>
-                    <li>Classes inmplemented "Parcelable", a fast form of serialization with more control designed specifically for Android applications</li>
+                    <li>Classes implemented "Parcelable", a fast form of serialization with more control designed specifically for Android applications</li>
                     <ul>
                         <li>Watned to be able to store the "Category" and "Subcategory" objects on disk</li>
                     </ul>
@@ -109,7 +114,7 @@
                 </ul>
             </div>
         </div>
-
+        <!--Screenshots-->
         <div class="projectInfo">
             <div class="projectInfoTitle">
                 <h3>Application Screenshots</h3>
@@ -122,40 +127,128 @@
                 <img src="res/Screenshots/Biippo/Group2.png" />
                 <img src="res/Screenshots/Biippo/Group3.png" />
             </div>
-
-            <div class="projectInfo">
-                <div class="projectInfoTitle">
-                    <h3>Technology Used</h3>
-                    <div class="projectInfoTitleIcon">
-                      <img src="res/Icons/technologyIcon.png" />
-                    </div>
+        </div>
+        <!--Technology Used-->
+        <div class="projectInfo">
+            <div class="projectInfoTitle">
+                <h3>Technology Used</h3>
+                <div class="projectInfoTitleIcon">
+                    <img src="res/Icons/technologyIcon.png" />
                 </div>
-                <div class="technologyIcons">
-                  <img src="res/Technology/android.png" />
-                  <img src="res/Technology/androidStudio.png" />
-                  <img src="res/Technology/java.png" />
-                  <img src="res/Technology/xml.png" />
-                </div>
-
+            </div>
+            <div class="technologyIcons">
+                <img src="res/Technology/android.png" />
+                <img src="res/Technology/androidStudio.png" />
+                <img src="res/Technology/java.png" />
+                <img src="res/Technology/xml.png" />
             </div>
 
         </div>
 
-        <div id="Filesystem" class="tabContent">
-            <h2>Filesystem in Java</h2>
+    </div>
+
+    <div id="Filesystem" class="tabContent">
+        <!--Title-->
+        <div class="projectTitle">
+            <h2>Java Filesystem</h2>
+            <div class="githubButton">
+                <a href="https://github.com/BrodySchulke/Filesystem" target="_blank">
+                    <input class="githubIcon" type="image" src="res/Icons/githubIcon.png" / />
+                </a>
+                <h3>Click me!</h3>
+            </div>
         </div>
-        <div id="JollyBanker" class="tabContent">
-            <h2>Banking System Implementation</h2>
+        <!--About-->
+        <div class="projectInfo">
+          <div class="projectInfoTitle">
+            <h3>About the Filesystem</h3>
+            <div class="projectInfoTitleIcon">
+              <img src="res/Icons/filesystemIcon.png" />
+            </div>
+          </div>
+          <div class="projectInfoText">
+            <ul>
+              <li>Imitates a smaller subset of functions of a modern filesystem</li>
+              <li>Allows users to create a manipulate small-sized files</li>
+              <li>Provides a mechanism for storing these files in directories</li>
+              <ul>
+                <li>Single root directory, not a recursive directory structure</li>
+              </ul>
+              <li>Implemented on a simulated operating system</li>
+            </ul>
+          </div>
         </div>
-        <div id="Disassembler" class="tabContent">
-            <h2>Disassembler</h2>
+        <!--Technical Details-->
+        <div class="projectInfo">
+          <div class="projectInfoTitle">
+            <h3>Filesystem's Technical Details</h3>
+            <div class="projectInfoTitleIcon">
+              <img src="res/Icons/detailsIcon.png" />
+            </div>
+          </div>
+          <div class="projectInfoText">
+            <ul>
+              <li>Filesystem implemented in Java using IntelliJ</li>
+              <li>Implemented a simplified version of the Unix Inode</li>
+              <ul>
+                <li>Contains 12 pointers, 11 to indirect blocks and 1 to another set of blocks</li>
+                <li>Stores file length, number of file table entries, and a flag to determine the status of the Inode</li>
+                <li>Writes to disk, finds target block, registers index blocks, registers target blocks, and unregisters index blocks</li>
+              </ul>
+              <li>Implemented a simplified directory</li>
+              <ul>
+                <li>Contained a root directory</li>
+                <li>Abstracted class that finds free slots and allocates slots for files, and finds files for users</li>
+                <li>Achieves functionalities by interacting with Inodes</li>
+              </ul>
+              <li>Implemented a file table</li>
+              <ul>
+                <li>Maintains file entries in file cabinet through a vector of file table entries and a reference to the root directory</li>
+                <li>Operations include allocating and freeing files along with notifying users if the file table is empty or not</li>
+                <li>Handles the required operations for creating and configuring various Inodes</li>
+              </ul>
+              <li>Implemented a Superblock</li>
+              <ul>
+                <li>Describes important data of the whole filesystem and OS</li>
+                <li>Describes number of disc blocks, Inodes, and the block number of the head block of the free list</li>
+              </ul>
+              <li>Implemented Kernel and SysLib</li>
+              <ul>
+                <li>Kernel was used to enable the OS to handle the various operations required by the Filesystem</li>
+                <li>SysLib was used to send the proper Kernel interrupts for specific Filesystem functionalities</li>
+              </ul>
+            </ul>
+          </div>
         </div>
-        <div id="MovieStore" class="tabContent">
-            <h2>Movie Store Implementation</h2>
+        <!--Technology Used-->
+        <div class="projectInfo">
+          <div class="projectInfoTitle">
+            <h3>Technology Used</h3>
+            <div class="projectInfoTitleIcon">
+              <img src="res/Icons/technologyIcon.png" />
+            </div>
+          </div>
+          <div class="technologyIcons">
+            <img src="res/Technology/ubuntu.png" />
+            <img src="res/Technology/intellij.png" />
+            <img src="res/Technology/java.png" />
+          </div>
         </div>
-        <div id="CityUtils" class="tabContent">
-            <h2>City Utility Management Database</h2>
-        </div>
+    </div>
+
+
+    <div id="JollyBanker" class="tabContent">
+        <h2>Banking System Implementation</h2>
+    </div>
+    <div id="Disassembler" class="tabContent">
+        <h2>Disassembler</h2>
+    </div>
+    <div id="MovieStore" class="tabContent">
+        <h2>Movie Store Implementation</h2>
+    </div>
+    <div id="CityUtils" class="tabContent">
+        <h2>City Utility Management Database</h2>
+    </div>
 </body>
 
 </html>

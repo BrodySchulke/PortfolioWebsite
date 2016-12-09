@@ -32,6 +32,7 @@ function openTab(evt, tabName){
 
 
 $(document).ready(function(){
+  $("#startupTab").trigger("click");
   $(window).scroll(function(){
     if($(window).scrollTop() > 100){
       $("#scrollUp").fadeIn("slow");
