@@ -15,15 +15,58 @@
     <ul class="tabs">
         <li><a href="javascript:void(0)" class="tabLink" id="startupTab" onclick="openTab(event, 'About')">About</a></li>
         <li><a href="javascript:void(0)" class="tabLink" onclick="openTab(event, 'Projects')">Projects</a></li>
-        <li><a href="javascript:void(0)" class="tabLink" onclick="openTab(event, 'TBD')">TBD</a></li>
+        <li><a href="javascript:void(0)" class="tabLink" onclick="openTab(event, 'Contact')">Contact</a></li>
     </ul>
 
     <div id="About" class="tabContent">
-      <div class="projectTitle">
-        <h2>About Brody Schulke</h2>
-      </div>
+        <div class="projectTitle">
+            <h2>About Brody Schulke</h2>
+        </div>
+        <img src="res/resume.png" id="Resume" />
+    </div>
 
-        <img src="res/resume.png" id="Resume"/>
+    <div id="Contact" class="tabContent">
+        <form action="contact.php" method="post">
+            <table width="450px">
+                <tr>
+                    <td>
+                        <label for="firstName" style="font-family:'Bree Serif', serif">First Name*</label>
+                    </td>
+                    <td>
+                        <input type="text" name="firstName" maxlength="50" style="width:450px;font-family:'Ubuntu', sans-serif" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="lastName" style="font-family:'Bree Serif', serif">Last Name*</label>
+                    </td>
+                    <td>
+                        <input type="text" name="lastName" maxlength="50" style="width:450px;font-family:'Ubuntu', sans-serif" />
+                    </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="senderEmail" style="font-family:'Bree Serif', serif">Your Email*</label>
+                  </td>
+                  <td>
+                    <input type="text" name="senderEmail" maxlength="50" style="width:450px;font-family:'Ubuntu', sans-serif" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="comments" style="font-family:'Bree Serif', serif">Comments*</label>
+                  </td>
+                  <td>
+                    <textarea name="comments" maxlength="1000" style="resize:none;width:450px;height:150px;font-family:'Ubuntu', sans-serif"></textarea>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2" style="text-align:center">
+                    <input type="submit" value="Submit" />
+                  </td>
+                </tr>
+            </table>
+        </form>
     </div>
 
     <div id="Projects" class="subTabs">
@@ -160,161 +203,167 @@
         </div>
         <!--About-->
         <div class="projectInfo">
-          <div class="projectInfoTitle">
-            <h3>About the Filesystem</h3>
-            <div class="projectInfoTitleIcon">
-              <img src="res/Icons/filesystemIcon.png" />
+            <div class="projectInfoTitle">
+                <h3>About the Filesystem</h3>
+                <div class="projectInfoTitleIcon">
+                    <img src="res/Icons/filesystemIcon.png" />
+                </div>
             </div>
-          </div>
-          <div class="projectInfoText">
-            <ul>
-              <li>Imitates a smaller subset of functions of a modern filesystem</li>
-              <li>Allows users to create a manipulate small-sized files</li>
-              <li>Provides a mechanism for storing these files in directories</li>
-              <ul>
-                <li>Single root directory, not a recursive directory structure</li>
-              </ul>
-              <li>Implemented on a simulated operating system</li>
-            </ul>
-          </div>
+            <div class="projectInfoText">
+                <ul>
+                    <li>Imitates a smaller subset of functions of a modern filesystem</li>
+                    <li>Allows users to create a manipulate small-sized files</li>
+                    <li>Provides a mechanism for storing these files in directories</li>
+                    <ul>
+                        <li>Single root directory, not a recursive directory structure</li>
+                    </ul>
+                    <li>Implemented on a simulated operating system</li>
+                </ul>
+            </div>
         </div>
         <!--Technical Details-->
         <div class="projectInfo">
-          <div class="projectInfoTitle">
-            <h3>Filesystem's Technical Details</h3>
-            <div class="projectInfoTitleIcon">
-              <img src="res/Icons/detailsIcon.png" />
+            <div class="projectInfoTitle">
+                <h3>Filesystem's Technical Details</h3>
+                <div class="projectInfoTitleIcon">
+                    <img src="res/Icons/detailsIcon.png" />
+                </div>
             </div>
-          </div>
-          <div class="projectInfoText">
-            <ul>
-              <li>Filesystem implemented in Java using IntelliJ</li>
-              <li>Implemented a simplified version of the Unix Inode</li>
-              <ul>
-                <li>Contains 12 pointers, 11 to indirect blocks and 1 to another set of blocks</li>
-                <li>Stores file length, number of file table entries, and a flag to determine the status of the Inode</li>
-                <li>Writes to disk, finds target block, registers index blocks, registers target blocks, and unregisters index blocks</li>
-              </ul>
-              <li>Implemented a simplified directory</li>
-              <ul>
-                <li>Contained a root directory</li>
-                <li>Abstracted class that finds free slots and allocates slots for files, and finds files for users</li>
-                <li>Achieves functionalities by interacting with Inodes</li>
-              </ul>
-              <li>Implemented a file table</li>
-              <ul>
-                <li>Maintains file entries in file cabinet through a vector of file table entries and a reference to the root directory</li>
-                <li>Operations include allocating and freeing files along with notifying users if the file table is empty or not</li>
-                <li>Handles the required operations for creating and configuring various Inodes</li>
-              </ul>
-              <li>Implemented a Superblock</li>
-              <ul>
-                <li>Describes important data of the whole filesystem and OS</li>
-                <li>Describes number of disc blocks, Inodes, and the block number of the head block of the free list</li>
-              </ul>
-              <li>Implemented Kernel and SysLib</li>
-              <ul>
-                <li>Kernel was used to enable the OS to handle the various operations required by the Filesystem</li>
-                <li>SysLib was used to send the proper Kernel interrupts for specific Filesystem functionalities</li>
-              </ul>
-            </ul>
-          </div>
+            <div class="projectInfoText">
+                <ul>
+                    <li>Filesystem implemented in Java using IntelliJ</li>
+                    <li>Implemented a simplified version of the Unix Inode</li>
+                    <ul>
+                        <li>Contains 12 pointers, 11 to indirect blocks and 1 to another set of blocks</li>
+                        <li>Stores file length, number of file table entries, and a flag to determine the status of the Inode</li>
+                        <li>Writes to disk, finds target block, registers index blocks, registers target blocks, and unregisters index blocks</li>
+                    </ul>
+                    <li>Implemented a simplified directory</li>
+                    <ul>
+                        <li>Contained a root directory</li>
+                        <li>Abstracted class that finds free slots and allocates slots for files, and finds files for users</li>
+                        <li>Achieves functionalities by interacting with Inodes</li>
+                    </ul>
+                    <li>Implemented a file table</li>
+                    <ul>
+                        <li>Maintains file entries in file cabinet through a vector of file table entries and a reference to the root directory</li>
+                        <li>Operations include allocating and freeing files along with notifying users if the file table is empty or not</li>
+                        <li>Handles the required operations for creating and configuring various Inodes</li>
+                    </ul>
+                    <li>Implemented a Superblock</li>
+                    <ul>
+                        <li>Describes important data of the whole filesystem and OS</li>
+                        <li>Describes number of disc blocks, Inodes, and the block number of the head block of the free list</li>
+                    </ul>
+                    <li>Implemented Kernel and SysLib</li>
+                    <ul>
+                        <li>Kernel was used to enable the OS to handle the various operations required by the Filesystem</li>
+                        <li>SysLib was used to send the proper Kernel interrupts for specific Filesystem functionalities</li>
+                    </ul>
+                </ul>
+            </div>
         </div>
         <!--Technology Used-->
         <div class="projectInfo">
-          <div class="projectInfoTitle">
-            <h3>Technology Used</h3>
-            <div class="projectInfoTitleIcon">
-              <img src="res/Icons/technologyIcon.png" />
+            <div class="projectInfoTitle">
+                <h3>Technology Used</h3>
+                <div class="projectInfoTitleIcon">
+                    <img src="res/Icons/technologyIcon.png" />
+                </div>
             </div>
-          </div>
-          <div class="technologyIcons">
-            <img src="res/Technology/ubuntu.png" />
-            <img src="res/Technology/intellij.png" />
-            <img src="res/Technology/java.png" />
-          </div>
+            <div class="technologyIcons">
+                <img src="res/Technology/ubuntu.png" />
+                <img src="res/Technology/intellij.png" />
+                <img src="res/Technology/java.png" />
+            </div>
         </div>
     </div>
 
 
     <div id="JollyBanker" class="tabContent">
-      <!--Title-->
-      <div class="projectTitle">
-          <h2>Jolly Banker</h2>
-          <div class="githubButton">
-              <a href="https://github.com/BrodySchulke/The-Jolly-Banker" target="_blank">
-                  <input class="githubIcon" type="image" src="res/Icons/githubIcon.png" / />
-              </a>
-              <h3>Click me!</h3>
-          </div>
-      </div>
-      <!--About-->
-      <div class="projectInfo">
-        <div class="projectInfoTitle">
-          <h3>About the Jolly Banker</h3>
-          <div class="projectInfoTitleIcon">
-            <img src="res/Icons/bankerIcon.png" />
-          </div>
+        <!--Title-->
+        <div class="projectTitle">
+            <h2>Jolly Banker</h2>
+            <div class="githubButton">
+                <a href="https://github.com/BrodySchulke/The-Jolly-Banker" target="_blank">
+                    <input class="githubIcon" type="image" src="res/Icons/githubIcon.png" / />
+                </a>
+                <h3>Click me!</h3>
+            </div>
         </div>
-        <div class="projectInfoText">
-          <ul>
-            <li>Mimics a banking system where various transactions may occur</li>
-            <ul>
-              <li>Open account, withdraw funds, deposit funds, and print transaction history</li>
-            </ul>
-            <li>Accounts for each customer has ten funds in which money can be placed</li>
-            <li>Certain accounts have overdraft protection that is covered by other predetermined accounts</li>
-          </ul>
+        <!--About-->
+        <div class="projectInfo">
+            <div class="projectInfoTitle">
+                <h3>About the Jolly Banker</h3>
+                <div class="projectInfoTitleIcon">
+                    <img src="res/Icons/bankerIcon.png" />
+                </div>
+            </div>
+            <div class="projectInfoText">
+                <ul>
+                    <li>Mimics a banking system where various transactions may occur</li>
+                    <ul>
+                        <li>Open account, withdraw funds, deposit funds, and print transaction history</li>
+                    </ul>
+                    <li>Accounts for each customer has ten funds in which money can be placed</li>
+                    <li>Certain accounts have overdraft protection that is covered by other predetermined accounts</li>
+                </ul>
+            </div>
         </div>
-      </div>
-      <!--Technical Details-->
-      <div class="projectInfo">
-        <div class="projectInfoTitle">
-          <h3>Jolly Banker's Technical Details</h3>
-          <div class="projectInfoTitleIcon">
-            <img src="res/Icons/detailsIcon.png" />
-          </div>
+        <!--Technical Details-->
+        <div class="projectInfo">
+            <div class="projectInfoTitle">
+                <h3>Jolly Banker's Technical Details</h3>
+                <div class="projectInfoTitleIcon">
+                    <img src="res/Icons/detailsIcon.png" />
+                </div>
+            </div>
+            <div class="projectInfoText">
+                <ul>
+                    <li>Implemented in C++ using Visual Studio</li>
+                    <li>Transactions would be read in a list from a given text file</li>
+                    <ul>
+                        <li>Transactions would be stored in a queue and then processed</li>
+                        <li>If statements were used to determine the transaction type</li>
+                    </ul>
+                    <li>Accounts were stored in a Binary Search Tree</li>
+                    <ul>
+                        <li>Accounts held lists of predetermined fund accounts</li>
+                        <li>Accounts and funds to use for the individual transactions were determined by a code read in from the text file into the Transaction queue</li>
+                    </ul>
+                    <li>The entire tree of accounts and their balances are printable</li>
+                    <li>Individual account transaction histories were stored in queues and were printable</li>
+                </ul>
+            </div>
         </div>
-        <div class="projectInfoText">
-          <ul>
-            <li>Implemented in C++ using Visual Studio</li>
-            <li>Transactions would be read in a list from a given text file</li>
-            <ul>
-              <li>Transactions would be stored in a queue and then processed</li>
-              <li>If statements were used to determine the transaction type</li>
-            </ul>
-            <li>Accounts were stored in a Binary Search Tree</li>
-            <ul>
-              <li>Accounts held lists of predetermined fund accounts</li>
-              <li>Accounts and funds to use for the individual transactions were determined by a code read in from the text file into the Transaction queue</li>
-            </ul>
-            <li>The entire tree of accounts and their balances are printable</li>
-            <li>Individual account transaction histories were stored in queues and were printable</li>
-          </ul>
+        <!--Technology Used-->
+        <div class="projectInfo">
+            <div class="projectInfoTitle">
+                <h3>Technology Used</h3>
+                <div class="projectInfoTitleIcon">
+                    <img src="res/Icons/technologyIcon.png" />
+                </div>
+            </div>
+            <div class="technologyIcons">
+                <img src="res/Technology/c++.png" />
+                <img src="res/Technology/visualStudio.png" />
+            </div>
         </div>
-      </div>
-      <!--Technology Used-->
-      <div class="projectInfo">
-        <div class="projectInfoTitle">
-          <h3>Technology Used</h3>
-          <div class="projectInfoTitleIcon">
-            <img src="res/Icons/technologyIcon.png" />
-          </div>
-        </div>
-        <div class="technologyIcons">
-          <img src="res/Technology/c++.png" />
-          <img src="res/Technology/visualStudio.png" />
-        </div>
-      </div>
     </div>
     <div id="Disassembler" class="tabContent">
         <h2>Disassembler</h2>
+        <h1>Under Construction</h1>
+        <img src="res/Icons/underConstruction.png" height="300" width="300" />
     </div>
     <div id="MovieStore" class="tabContent">
-        <h2>Movie Store Implementation</h2>
+        <h2>Movie Store</h2>
+        <h1>Under Construction</h1>
+        <img src="res/Icons/underConstruction.png" height="300" width="300" />
     </div>
     <div id="CityUtils" class="tabContent">
         <h2>City Utility Management Database</h2>
+        <h1>Under Construction</h1>
+        <img src="res/Icons/underConstruction.png" height="300" width="300" />
     </div>
 </body>
 
