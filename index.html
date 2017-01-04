@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -26,14 +27,15 @@
     </div>
 
     <div id="Contact" class="tabContent">
-        <form action="contact.php" method="post">
+        <h3 style="text-align:left;margin-left:100px;">* Required Field</h3>
+        <form id="ContactForm" method="POST">
             <table width="450px">
                 <tr>
                     <td>
                         <label for="firstName" style="font-family:'Bree Serif', serif">First Name*</label>
                     </td>
                     <td>
-                        <input type="text" name="firstName" maxlength="50" style="width:450px;font-family:'Ubuntu', sans-serif" />
+                        <input type="text" name="firstName" id="firstName" maxlength="50" style="width:450px;font-family:'Ubuntu', sans-serif" />
                     </td>
                 </tr>
                 <tr>
@@ -41,7 +43,7 @@
                         <label for="lastName" style="font-family:'Bree Serif', serif">Last Name*</label>
                     </td>
                     <td>
-                        <input type="text" name="lastName" maxlength="50" style="width:450px;font-family:'Ubuntu', sans-serif" />
+                        <input type="text" name="lastName" id="lastName" maxlength="50" style="width:450px;font-family:'Ubuntu', sans-serif" />
                     </td>
                 </tr>
                 <tr>
@@ -49,7 +51,7 @@
                     <label for="senderEmail" style="font-family:'Bree Serif', serif">Your Email*</label>
                   </td>
                   <td>
-                    <input type="text" name="senderEmail" maxlength="50" style="width:450px;font-family:'Ubuntu', sans-serif" />
+                    <input type="text" name="senderEmail" id="senderEmail" maxlength="50" style="width:450px;font-family:'Ubuntu', sans-serif" />
                   </td>
                 </tr>
                 <tr>
@@ -57,16 +59,29 @@
                     <label for="comments" style="font-family:'Bree Serif', serif">Comments*</label>
                   </td>
                   <td>
-                    <textarea name="comments" maxlength="1000" style="resize:none;width:450px;height:150px;font-family:'Ubuntu', sans-serif"></textarea>
+                    <textarea name="comments" maxlength="1000" id="comments" style="resize:none;width:450px;height:150px;font-family:'Ubuntu', sans-serif"></textarea>
                   </td>
                 </tr>
                 <tr>
+                  <td>
+                    <img  src="res\captcha.png"/>
+                  </td>
+                  <td>
+                    <input type="text" name="captchaAnswer" id="captchaAnswer" maxlength="50" style="width:450px;font-family:'Ubuntu', sans-serif" />
+                  </td>
                   <td colspan="2" style="text-align:center">
-                    <input type="submit" value="Submit" />
+                    <input type="button" id="Submit" value="Submit" onclick="submitForm(event)" />
                   </td>
                 </tr>
             </table>
         </form>
+        <p id="ErrorSubmit" hidden="hidden">
+          Error submitting, please try again.
+          Make sure all field are filled out, a valid email is provided, and the captcha answer is correct
+        </p>
+        <p id="ValidSubmit" hidden="hidden">
+          Thank you for your submission! I will reply to your message shortly
+        </p>
     </div>
 
     <div id="Projects" class="subTabs">
@@ -87,7 +102,7 @@
             <h2>Biippo Car Maintenance Application</h2>
             <div class="githubButton">
                 <a href="https://github.com/samlishen/Biippo" target="_blank">
-                    <input class="githubIcon" type="image" src="res/Icons/githubIcon.png" / />
+                    <input class="githubIcon" type="image" src="res/Icons/githubIcon.png" />
                 </a>
                 <h3>Click me!</h3>
             </div>
@@ -166,9 +181,9 @@
                 </div>
             </div>
             <div class="projectInfoScreenshots">
-                <img src="res/Screenshots/Biippo/Group1.png" class="firstProjectScreenshot" />
-                <img src="res/Screenshots/Biippo/Group2.png" />
-                <img src="res/Screenshots/Biippo/Group3.png" />
+                <img src="res/Screenshots/Biippo/Group1.PNG" class="firstProjectScreenshot" />
+                <img src="res/Screenshots/Biippo/Group2.PNG" />
+                <img src="res/Screenshots/Biippo/Group3.PNG" />
             </div>
         </div>
         <!--Technology Used-->
@@ -196,7 +211,7 @@
             <h2>Java Filesystem</h2>
             <div class="githubButton">
                 <a href="https://github.com/BrodySchulke/Filesystem" target="_blank">
-                    <input class="githubIcon" type="image" src="res/Icons/githubIcon.png" / />
+                    <input class="githubIcon" type="image" src="res/Icons/githubIcon.png" />
                 </a>
                 <h3>Click me!</h3>
             </div>
@@ -286,7 +301,7 @@
             <h2>Jolly Banker</h2>
             <div class="githubButton">
                 <a href="https://github.com/BrodySchulke/The-Jolly-Banker" target="_blank">
-                    <input class="githubIcon" type="image" src="res/Icons/githubIcon.png" / />
+                    <input class="githubIcon" type="image" src="res/Icons/githubIcon.png" />
                 </a>
                 <h3>Click me!</h3>
             </div>
@@ -350,11 +365,83 @@
             </div>
         </div>
     </div>
+
     <div id="Disassembler" class="tabContent">
-        <h2>Disassembler</h2>
-        <h1>Under Construction</h1>
-        <img src="res/Icons/underConstruction.png" height="300" width="300" />
+      <!--Title-->
+      <div class="projectTitle">
+          <h2>Jolly Banker</h2>
+          <div class="githubButton">
+              <a href="https://github.com/BrodySchulke/Disassembler" target="_blank">
+                  <input class="githubIcon" type="image" src="res/Icons/githubIcon.png" />
+              </a>
+              <h3>Click me!</h3>
+          </div>
+      </div>
+      <!--About-->
+      <div class="projectInfo">
+          <div class="projectInfoTitle">
+              <h3>About the Disassembler</h3>
+              <div class="projectInfoTitleIcon">
+                  <img src="res/Icons/disassemblerIcon.png" />
+              </div>
+          </div>
+          <div class="projectInfoText">
+              <ul>
+                  <li>Decodes Opcodes and is displayed to the user</li>
+                  <ul>
+                      <li>Only a subset of opcodes are decoded as they were the ones specified for the assignment</li>
+                  </ul>
+                  <li>Handles opcodes that were not programatically decoded by printing "Bad Data" and continuing with the program logic</li>
+                  <li>Provided a console as a user-friendly way to interact with the program</li>
+                  <li>Could start within any valid address range and provide correct decoded output</li>
+              </ul>
+          </div>
+      </div>
+      <!--Technical Details-->
+      <div class="projectInfo">
+          <div class="projectInfoTitle">
+              <h3>Disassembler's Technical Details</h3>
+              <div class="projectInfoTitleIcon">
+                  <img src="res/Icons/detailsIcon.png" />
+              </div>
+          </div>
+          <div class="projectInfoText">
+              <ul>
+                  <li>Disassembled assembly code using the 68K Assembly instruction set</li>
+                  <li>Implemented using the EASy68K IDE</li>
+                  <li>Could decode a handful of the 68K Assembly instruction set</li>
+                  <ul>
+                    <li>Decoded instruction set seen below:</li>
+                    <img src="res/Screenshots/Disassembler/Instructions.png" />
+                  </ul>
+                  <li>Uses a process of elimination through bit shifting to determine the current opcode that is being decoded</li>
+                  <ul>
+                    <li>Begins by looking at the first 4 bits of specific instructions</li>
+                    <li>Uses a jump table to jump to the next set of logic based on the given bits, or to print "Bad Data" if the bits are invalid</li>
+                  </ul>
+                  <li>Created our own very extensive test to verify that all possible combinations of required opcodes could be decoded properly</li>
+                  <li>Created and used a java application that could parse some of the output from decoding in order to compare the results against the original instructions for verification</li>
+                  <li>Console application for users was developed using the 68K instruction set as well</li>
+              </ul>
+          </div>
+      </div>
+      <!--Technology Used-->
+      <div class="projectInfo">
+          <div class="projectInfoTitle">
+              <h3>Technology Used</h3>
+              <div class="projectInfoTitleIcon">
+                  <img src="res/Icons/technologyIcon.png" />
+              </div>
+          </div>
+          <div>
+              <img src="res/Technology/assemblyLanguage.png" style="height:100px;width:300px"/>
+              <img src="res/Technology/easy68K.png"  style="height:100px;width:200px"/>
+              <div class="technologyIcons">
+
+              </div>
+          </div>
     </div>
+</div>
     <div id="MovieStore" class="tabContent">
         <h2>Movie Store</h2>
         <h1>Under Construction</h1>

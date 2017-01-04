@@ -166,4 +166,17 @@ ul.tabs li a:focus, .active {
 
 #Resume{
   margin-top: 20px;
+
+}
+
+#ErrorSubmit{
+  color: red;
+  font-size: 16pt;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+#ValidSubmit{
+  color: green;
+  font-size: 16pt;
+  font-family: 'Ubuntu', sans-serif;
 }
